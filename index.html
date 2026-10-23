@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desert Residence — A Modern Masterpiece in Scottsdale | Private Tour</title>
+<meta name="description" content="Desert Residence: a 5-bed, 6-bath modern estate in Troon Highlands, Scottsdale. Scroll the cinematic tour, explore the plan, and request a private viewing.">
+<style>
+:root{
+  --bg:#f6f1e7; --bg2:#efe7d8; --panel:#fffdf8; --line:#ddd2bf;
+  --ink:#221c15; --mut:#6f6353; --dim:#9a8b74;
+  --acc:#b05f2f; --acc2:#7c4a26;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.kicker{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--acc);font-weight:700}
+h1,h2,h3.serif{font-family:var(--serif);font-weight:400}
+em{color:var(--acc);font-style:italic}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(246,241,231,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:var(--serif);font-size:20px;letter-spacing:.06em}
+.logo b{color:var(--acc);font-weight:400}
+.nav-links{display:flex;gap:28px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#f6f1e7;border:none;padding:10px 20px;border-radius:99px;font-size:13px;font-weight:700}
+.nav-cta:hover{background:var(--acc2)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* scroll hero */
+.hero-wrap{height:440vh;position:relative}
+.hero-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#171310}
+.hero-layer{position:absolute;inset:0;opacity:0;will-change:opacity,transform}
+.hero-layer img{width:100%;height:100%;object-fit:cover}
+.hero-layer::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.38),transparent 30%,transparent 55%,rgba(20,14,8,.66))}
+.hero-price{position:absolute;top:92px;right:24px;z-index:4;text-align:right;color:#fff}
+.hero-price .p{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px)}
+.hero-price .a{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.hero-copy{position:absolute;z-index:3;left:0;right:0;bottom:11vh;padding:0 24px;pointer-events:none}
+.hero-copy .inner{max-width:1220px;margin:0 auto;position:relative;min-height:190px}
+.hero-copy .slide{position:absolute;left:0;bottom:0;max-width:640px;opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease;color:#fff}
+.hero-copy .slide.on{opacity:1;transform:none;pointer-events:auto}
+.hero-copy h1,.hero-copy h2{font-family:var(--serif);font-size:clamp(38px,5.6vw,68px);line-height:1.05;font-weight:400}
+.hero-copy h1 em,.hero-copy h2 em{color:#f0b98a}
+.hero-copy p{margin-top:12px;color:rgba(255,255,255,.88);font-size:16.5px;max-width:480px}
+.btn{display:inline-block;padding:13px 26px;border-radius:99px;font-weight:700;font-size:14px;border:1px solid transparent;transition:.2s;margin-top:20px}
+.btn-acc{background:var(--acc);color:#fff}
+.btn-acc:hover{background:var(--acc2)}
+.btn-line{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.4);margin-left:10px}
+.hero-ui{position:absolute;z-index:4;right:24px;bottom:11vh;display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero-ui .track{width:3px;height:120px;background:rgba(255,255,255,.25);border-radius:99px;position:relative;overflow:hidden}
+.hero-ui .track i{position:absolute;top:0;left:0;width:100%;background:#f0b98a;display:block}
+.hero-ui button{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.25);color:#fff;font-size:11px;font-weight:700}
+.hero-ui button.on{background:#f0b98a;color:#221c15;border-color:#f0b98a}
+.scroll-hint{position:absolute;z-index:4;top:92px;left:24px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+@media(max-width:640px){.hero-price{display:none}.hero-ui{display:none}}
+
+/* sections */
+section{padding:96px 0}
+.sec-head{max-width:700px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(30px,4.2vw,48px);line-height:1.12;margin-top:12px}
+.sec-head p{color:var(--mut);margin-top:12px;font-size:16.5px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* specs strip */
+.specs{background:var(--ink);color:#f3ead9;padding:0}
+.specs-in{display:grid;grid-template-columns:repeat(6,1fr)}
+.spec{padding:30px 8px;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.spec:first-child{border-left:none}
+.spec b{display:block;font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:400}
+.spec span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#c9b995}
+@media(max-width:820px){.specs-in{grid-template-columns:1fr 1fr 1fr}.spec{border-top:1px solid rgba(255,255,255,.12)}}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media(max-width:880px){.story{grid-template-columns:1fr}}
+.story .ph{border-radius:20px;overflow:hidden}
+.story .ph img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+.story p{color:var(--mut);margin-top:14px;font-size:16.5px}
+.feat-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:26px;font-size:15px}
+.feat-list span{border-bottom:1px solid var(--line);padding-bottom:8px}
+.feat-list span::before{content:"— ";color:var(--acc)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.gal{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gal{grid-template-columns:1fr}}
+.gal figure{border-radius:16px;overflow:hidden;position:relative;cursor:pointer}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .6s ease}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(transparent,rgba(15,10,5,.72))}
+
+/* plan */
+.plan{background:var(--bg2);border-block:1px solid var(--line)}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:26px}
+@media(max-width:760px){.plan-grid{grid-template-columns:1fr}}
+.plan-grid figure{border-radius:18px;overflow:hidden}
+.plan-grid img{width:100%;object-fit:cover;aspect-ratio:16/10}
+table.plan-t{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+table.plan-t td,table.plan-t th{padding:14px 20px;border-bottom:1px solid var(--line);font-size:15px;text-align:left}
+table.plan-t tr:last-child td{border-bottom:none}
+table.plan-t td:last-child,table.plan-t th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+table.plan-t tr.total td{font-weight:800;background:var(--bg2)}
+
+/* agent + tour */
+.agent-tour{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:stretch}
+@media(max-width:880px){.agent-tour{grid-template-columns:1fr}}
+.agent-card{background:var(--ink);color:#f3ead9;border-radius:20px;padding:34px;display:flex;flex-direction:column}
+.agent-card img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--acc);margin-bottom:18px}
+.agent-card h3{font-family:var(--serif);font-size:26px;font-weight:400}
+.agent-card .role{color:#c9b995;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin:4px 0 14px}
+.agent-card p{color:#d8cdb8;font-size:15px}
+.agent-stats{display:flex;gap:26px;margin-top:auto;padding-top:22px}
+.agent-stats div b{display:block;font-family:var(--serif);font-size:23px;font-weight:400;color:#fff}
+.agent-stats div span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#c9b995}
+.tour-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:34px}
+.tour-card h3{font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:6px}
+.tour-card>p{color:var(--mut);font-size:14.5px;margin-bottom:20px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:7px;font-weight:700}
+input,select,textarea{background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:11px 13px;font-size:14.5px;font-family:inherit;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(176,95,47,.5);border-color:transparent}
+.err{display:none;color:#b3372a;font-size:12.5px;margin-top:5px}
+.fld.bad input,.fld.bad select{border-color:#b3372a}
+.fld.bad .err{display:block}
+.submit{width:100%;background:var(--acc);color:#fff;border:none;padding:14px;border-radius:99px;font-weight:800;font-size:14.5px}
+.submit:hover{background:var(--acc2)}
+.success{display:none;text-align:center;padding:26px 10px}
+.success.show{display:block}
+.success .tick{width:56px;height:56px;border-radius:50%;background:var(--acc);color:#fff;font-size:26px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.success h4{font-family:var(--serif);font-size:23px;font-weight:400;margin-bottom:8px}
+.success p{color:var(--mut);font-size:14.5px}
+.linkish{background:none;border:none;color:var(--acc);font-weight:800;font-size:14px;margin-top:14px;text-decoration:underline}
+
+footer{border-top:1px solid var(--line);padding:42px 0 52px;color:var(--dim);font-size:13.5px;background:var(--bg2)}
+.foot-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:95;display:none;align-items:center;justify-content:center;background:rgba(16,11,6,.94);padding:20px}
+.lb.open{display:flex}
+.lb img{max-width:min(1060px,94vw);max-height:82vh;border-radius:14px;object-fit:contain}
+.lb .cap{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#f3ead9;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.lb button{position:absolute;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.4);color:#fff;font-size:18px}
+.lb .x{top:18px;right:18px}
+.lb .prev{left:18px;top:50%;transform:translateY(-50%)}
+.lb .next{right:18px;top:50%;transform:translateY(-50%)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Desert <b>Residence</b></a>
+    <div class="nav-links">
+      <a href="#residence">The Residence</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#plan">Floor Plan</a>
+      <a href="#tour">Private Tour</a>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('tour').scrollIntoView({behavior:'smooth'})">Request a Tour</button>
+  </div>
+</nav>
+
+<!-- ============ SCROLL-CONTROLLED HERO ============ -->
+<div class="hero-wrap" id="top">
+  <div class="hero-stage">
+    <div class="hero-layer" data-layer="0"><img src="images/hero-1.jpg" alt="Desert Residence — symmetrical pool terrace"></div>
+    <div class="hero-layer" data-layer="1"><img src="images/hero-2.jpg" alt="Curved infinity pool and modern facade"></div>
+    <div class="hero-layer" data-layer="2"><img src="images/hero-3.jpg" alt="Glass walls opening to the pool court"></div>
+    <div class="hero-layer" data-layer="3"><img src="images/hero-4.jpg" alt="Sunlit great room with walls of glass"></div>
+    <div class="scroll-hint">Scroll to walk through</div>
+    <div class="hero-price">
+      <div class="a">Troon Highlands · Scottsdale, AZ</div>
+      <div class="p">$6,850,000</div>
+    </div>
+    <div class="hero-copy">
+      <div class="inner">
+        <div class="slide" data-slide="0">
+          <h1>A house the <em>desert</em> drew.</h1>
+          <p>Five bedrooms of glass, stone and shade, composed around a mirror-still pool in the high Sonoran desert.</p>
+          <a class="btn btn-acc" href="#tour">Request a Private Tour</a>
+          <a class="btn btn-line" href="#gallery">View Gallery</a>
+        </div>
+        <div class="slide" data-slide="1">
+          <h2>Water, held <em>perfectly</em> still.</h2>
+          <p>A 62-foot lap pool curves along the southern court — sunrise on the water, shade by afternoon.</p>
+        </div>
+        <div class="slide" data-slide="2">
+          <h2>Walls that <em>disappear.</em></h2>
+          <p>Floor-to-ceiling glass slides away entirely, merging the great room with the terrace and the mountains beyond.</p>
+        </div>
+        <div class="slide" data-slide="3">
+          <h2>Light does the <em>decorating.</em></h2>
+          <p>Inside: white oak, honed travertine and one uninterrupted view. This is the room the house was built around.</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ui">
+      <button data-goto="0" class="on">1</button>
+      <button data-goto="1">2</button>
+      <button data-goto="2">3</button>
+      <button data-goto="3">4</button>
+      <div class="track"><i id="heroBar"></i></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SPECS ============ -->
+<div class="specs">
+  <div class="wrap specs-in">
+    <div class="spec"><b>5</b><span>Bedrooms</span></div>
+    <div class="spec"><b>6</b><span>Bathrooms</span></div>
+    <div class="spec"><b>7,240</b><span>Sq Ft Living</span></div>
+    <div class="spec"><b>1.18</b><span>Acre Lot</span></div>
+    <div class="spec"><b>62 ft</b><span>Lap Pool</span></div>
+    <div class="spec"><b>2023</b><span>Year Built</span></div>
+  </div>
+</div>
+
+<!-- ============ STORY ============ -->
+<section id="residence">
+  <div class="wrap">
+    <div class="story">
+      <div class="ph reveal"><img src="images/gallery-1.jpg" alt="Front elevation with pool court"></div>
+      <div class="reveal">
+        <div class="kicker">The Residence</div>
+        <h2 class="serif" style="font-size:clamp(29px,3.8vw,44px);line-height:1.15;margin-top:12px">Built for the hour when the desert turns <em>gold</em></h2>
+        <p>Desert Residence was designed around a single moment: late afternoon, when the McDowell Mountains flush rose and the whole house — glass, water, stone — catches the same light. Deep overhangs keep the interiors cool and calm; every principal room faces the view.</p>
+        <p>It is a house that asks very little of you. Solar keeps the pool warm, the systems run themselves, and the casita gives guests a hotel of their own.</p>
+        <div class="feat-list">
+          <span>62-ft lap pool &amp; spa</span>
+          <span>Chef's kitchen + scullery</span>
+          <span>Detached guest casita</span>
+          <span>Primary wing with spa bath</span>
+          <span>Outdoor kitchen &amp; firepit</span>
+          <span>3-car garage + EV court</span>
+          <span>9.6 kW solar array</span>
+          <span>Whole-home automation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Gallery</div>
+      <h2 class="serif">Every room, a <em>view</em></h2>
+      <p>Click any photograph to view it full-screen.</p>
+    </div>
+    <div class="gal reveal" id="galGrid">
+      <figure data-cap="Front Elevation &amp; Pool Court"><img src="images/gallery-1.jpg" alt="Front elevation and pool court" loading="lazy"><figcaption>Front Elevation</figcaption></figure>
+      <figure data-cap="Evening Approach"><img src="images/gallery-2.jpg" alt="House glowing at dusk" loading="lazy"><figcaption>Evening Approach</figcaption></figure>
+      <figure data-cap="Garden Facade"><img src="images/gallery-3.jpg" alt="Timber-clad garden facade" loading="lazy"><figcaption>Garden Facade</figcaption></figure>
+      <figure data-cap="Reading Lounge"><img src="images/gallery-4.jpg" alt="Sunlit reading lounge" loading="lazy"><figcaption>Reading Lounge</figcaption></figure>
+      <figure data-cap="Living Pavilion"><img src="images/gallery-5.jpg" alt="Living pavilion with timber feature wall" loading="lazy"><figcaption>Living Pavilion</figcaption></figure>
+      <figure data-cap="Great Room"><img src="images/gallery-6.jpg" alt="Great room with staircase" loading="lazy"><figcaption>Great Room</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section class="plan" id="plan">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Floor Plan &amp; Spaces</div>
+      <h2 class="serif">One level. <em>No wasted steps.</em></h2>
+      <p>All principal rooms sit on a single level arranged around the pool court, with the primary wing at the quiet eastern end.</p>
+    </div>
+    <div class="plan-grid reveal">
+      <figure><img src="images/plan-dining.jpg" alt="Dining hall with staircase"></figure>
+      <figure><img src="images/plan-living.jpg" alt="Formal living room"></figure>
+    </div>
+    <div class="reveal">
+      <table class="plan-t">
+        <tr><th>Space</th><th>Area</th></tr>
+        <tr><td>Great Room</td><td>1,180 sq ft</td></tr>
+        <tr><td>Kitchen &amp; Scullery</td><td>760 sq ft</td></tr>
+        <tr><td>Dining Hall</td><td>420 sq ft</td></tr>
+        <tr><td>Primary Suite &amp; Spa Bath</td><td>1,050 sq ft</td></tr>
+        <tr><td>Bedrooms 2–4</td><td>1,240 sq ft</td></tr>
+        <tr><td>Guest Casita</td><td>590 sq ft</td></tr>
+        <tr><td>Baths, Laundry &amp; Utility</td><td>860 sq ft</td></tr>
+        <tr><td>Garage &amp; EV Court</td><td>1,140 sq ft</td></tr>
+        <tr class="total"><td>Total Living + Garage</td><td>7,240 sq ft</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AGENT + TOUR ============ -->
+<section id="tour">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Private Tour</div>
+      <h2 class="serif">See it at <em>golden hour</em></h2>
+      <p>Tours are private, unhurried and — if you can — best scheduled for the last hour of light.</p>
+    </div>
+    <div class="agent-tour">
+      <div class="agent-card reveal">
+        <img src="images/agent.jpg" alt="Marcus Hale, listing broker">
+        <h3>Marcus Hale</h3>
+        <div class="role">Principal Broker · Desert Line Realty</div>
+        <p>"I've sold eleven homes in Troon Highlands. This is the one I would keep. Come at sunset — the house makes its own case."</p>
+        <p style="margin-top:12px">+1 (480) 555-0164<br>marcus@desertline.example</p>
+        <div class="agent-stats">
+          <div><b>18 yrs</b><span>Experience</span></div>
+          <div><b>$480M</b><span>Career Sales</span></div>
+          <div><b>140+</b><span>Homes Sold</span></div>
+        </div>
+      </div>
+      <div class="tour-card reveal">
+        <h3>Request a private tour</h3>
+        <p>Share a few details and Marcus will confirm your slot personally — usually within the hour.</p>
+        <form id="tourForm" novalidate>
+          <div class="frow">
+            <div class="fld"><label for="fName">Full Name</label><input type="text" id="fName" placeholder="Alex Morgan" autocomplete="name"><div class="err">Please enter your name.</div></div>
+            <div class="fld"><label for="fPhone">Phone</label><input type="tel" id="fPhone" placeholder="+1 (555) 000-1234" autocomplete="tel"><div class="err">Please enter a valid phone number.</div></div>
+          </div>
+          <div class="fld"><label for="fEmail">Email</label><input type="email" id="fEmail" placeholder="you@email.com" autocomplete="email"><div class="err">Please enter a valid email address.</div></div>
+          <div class="frow">
+            <div class="fld"><label for="fDate">Preferred Date</label><input type="date" id="fDate"><div class="err">Pick a date from today onward.</div></div>
+            <div class="fld"><label for="fGuests">Guests</label>
+              <select id="fGuests">
+                <option value="">Select…</option><option>Just me</option><option>2 people</option>
+                <option>3 people</option><option>4+ people</option>
+              </select><div class="err">How many are coming?</div></div>
+          </div>
+          <div class="fld"><label for="fMsg">Anything we should prepare? (optional)</label>
+            <textarea id="fMsg" rows="3" placeholder="e.g. We'd love to see the casita and the solar setup."></textarea></div>
+          <button type="submit" class="submit">Request My Tour</button>
+          <p style="color:var(--dim);font-size:12.5px;margin-top:12px;text-align:center">Demo form — confirmation appears on screen; nothing is sent anywhere.</p>
+        </form>
+        <div class="success" id="tourSuccess">
+          <div class="tick">✓</div>
+          <h4>Request received.</h4>
+          <p id="tourSummary"></p>
+          <button class="linkish" id="tourAgain">Make another request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div><span class="logo" style="font-size:16px">Desert <b>Residence</b></span><br>Troon Highlands · Scottsdale, Arizona</div>
+    <div>Demo website — property details and prices are illustrative.<br>Photos: Unsplash. Rebrand in minutes via the README.</div>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lightbox">
+  <button class="x" id="lbX" aria-label="Close">✕</button>
+  <button class="prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="next" id="lbNext" aria-label="Next">›</button>
+  <div class="cap" id="lbCap"></div>
+</div>
+
+<script>
+/* ================= SCROLL-CONTROLLED HERO ================= */
+var layers = document.querySelectorAll('.hero-layer');
+var slides = document.querySelectorAll('.hero-copy .slide');
+var dots = document.querySelectorAll('.hero-ui button');
+var bar = document.getElementById('heroBar');
+var wrap = document.querySelector('.hero-wrap');
+var NSTAGE = layers.length, curStage = -1;
+function setStage(idx){
+  if (idx === curStage) return;
+  curStage = idx;
+  for (var s = 0; s < slides.length; s++) slides[s].classList.toggle('on', s === idx);
+  for (var d = 0; d < dots.length; d++) dots[d].classList.toggle('on', d === idx);
+}
+function heroUpdate(){
+  var rect = wrap.getBoundingClientRect();
+  var total = wrap.offsetHeight - window.innerHeight;
+  var p = Math.min(Math.max(-rect.top / total, 0), 1);
+  var pos = p * (NSTAGE - 1);
+  for (var i = 0; i < NSTAGE; i++){
+    var dist = Math.abs(pos - i);
+    var o = Math.max(0, 1 - dist);
+    var layer = layers[i];
+    layer.style.opacity = o.toFixed(3);
+    /* Z-axis dolly: each view pushes in as it becomes active, sequence keeps drifting forward */
+    var scale = 1.02 + (o * 0.10) + (p * 0.06);
+    layer.style.transform = 'scale(' + scale.toFixed(3) + ')';
+    layer.style.zIndex = String(Math.round(o * 10));
+  }
+  bar.style.height = (p * 100).toFixed(1) + '%';
+  setStage(Math.round(pos));
+}
+var ticking = false;
+window.addEventListener('scroll', function(){
+  if (!ticking){ ticking = true; requestAnimationFrame(function(){ heroUpdate(); ticking = false; }); }
+}, {passive:true});
+window.addEventListener('resize', heroUpdate);
+heroUpdate();
+for (var di = 0; di < dots.length; di++){
+  dots[di].addEventListener('click', function(){
+    var target = parseInt(this.getAttribute('data-goto'), 10);
+    var total = wrap.offsetHeight - window.innerHeight;
+    window.scrollTo({top: wrap.offsetTop + total * (target / (NSTAGE - 1)) + 4, behavior:'smooth'});
+  });
+}
+
+/* ================= LIGHTBOX ================= */
+var figs = Array.prototype.slice.call(document.querySelectorAll('#galGrid figure'));
+var lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+var lbIdx = 0;
+function lbShow(i){
+  lbIdx = (i + figs.length) % figs.length;
+  var img = figs[lbIdx].querySelector('img');
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  lbCap.textContent = figs[lbIdx].getAttribute('data-cap').replace(/&amp;/g, '&');
+}
+figs.forEach(function(f, i){ f.addEventListener('click', function(){ lbShow(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }); });
+function lbClose(){ lb.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('lbX').addEventListener('click', lbClose);
+document.getElementById('lbPrev').addEventListener('click', function(){ lbShow(lbIdx - 1); });
+document.getElementById('lbNext').addEventListener('click', function(){ lbShow(lbIdx + 1); });
+lb.addEventListener('click', function(e){ if (e.target === lb) lbClose(); });
+document.addEventListener('keydown', function(e){
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') lbClose();
+  if (e.key === 'ArrowLeft') lbShow(lbIdx - 1);
+  if (e.key === 'ArrowRight') lbShow(lbIdx + 1);
+});
+
+/* ================= TOUR FORM ================= */
+var dateEl = document.getElementById('fDate');
+dateEl.min = new Date().toISOString().split('T')[0];
+function setBad(id, bad){ document.getElementById(id).closest('.fld').classList.toggle('bad', bad); return !bad; }
+document.getElementById('tourForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var ok = true;
+  var name = document.getElementById('fName').value.trim();
+  var email = document.getElementById('fEmail').value.trim();
+  var phone = document.getElementById('fPhone').value.replace(/\D/g, '');
+  ok = setBad('fName', name.length < 2) && ok;
+  ok = setBad('fEmail', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) && ok;
+  ok = setBad('fPhone', phone.length < 7) && ok;
+  ok = setBad('fDate', !dateEl.value || dateEl.value < dateEl.min) && ok;
+  ok = setBad('fGuests', !document.getElementById('fGuests').value) && ok;
+  if (!ok) return;
+  var when = new Date(dateEl.value + 'T12:00:00').toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
+  document.getElementById('tourSummary').textContent =
+    'Thank you, ' + name.split(' ')[0] + '. Your private tour is requested for ' + when + ' (' +
+    document.getElementById('fGuests').value.toLowerCase() + '). Marcus will confirm by email at ' + email + ' shortly — golden hour slots go first.';
+  this.style.display = 'none';
+  document.getElementById('tourSuccess').classList.add('show');
+});
+document.getElementById('tourAgain').addEventListener('click', function(){
+  var f = document.getElementById('tourForm');
+  f.reset(); f.style.display = '';
+  document.getElementById('tourSuccess').classList.remove('show');
+});
+
+/* ================= REVEALS ================= */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
